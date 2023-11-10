@@ -7,7 +7,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { useFrame } from "@react-three/fiber";
 
 const Experience = () => {
-  const gltf = useLoader(GLTFLoader, "./models/hoodie2/untitled.gltf");
+  const gltf = useLoader(GLTFLoader, "./models/hoodie2/untitled3.gltf");
   const modelScale = [7, 7, 7];
 
   const directionalLight1Ref = useRef();
