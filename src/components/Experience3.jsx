@@ -14,9 +14,9 @@ const Experience = () => {
   const directionalLight2Ref = useRef();
   const directionalLight4Ref = useRef();
 
-  //   useHelper(directionalLight1Ref, DirectionalLightHelper, 1, "white");
-  //   useHelper(directionalLight2Ref, DirectionalLightHelper, 1, "red");
-  //   useHelper(directionalLight4Ref, DirectionalLightHelper, 1, "red");
+  // useHelper(directionalLight1Ref, DirectionalLightHelper, 1, "white");
+  // useHelper(directionalLight2Ref, DirectionalLightHelper, 1, "red");
+  // useHelper(directionalLight4Ref, DirectionalLightHelper, 1, "blue");
 
   const modelRef = useRef();
 
@@ -27,23 +27,23 @@ const Experience = () => {
 
   return (
     <>
-      {/* <directionalLight
+      <directionalLight
         ref={directionalLight1Ref}
-        position={[0, 2, 5]}
-        intensity={0.5}
-        color={"#ff0000"}
-      /> */}
+        position={[0, 2, -5]}
+        intensity={3}
+        // color={"#ff0000"}
+      />
       <directionalLight
         ref={directionalLight2Ref}
         position={[0, 2, 5]}
         intensity={3}
         // color={"#ff0000"}
       />
-      {/* <directionalLight
+      <directionalLight
         ref={directionalLight4Ref}
         position={[0, 5, 0]}
-        intensity={0.5}
-      /> */}
+        intensity={3}
+      />
       <Suspense fallback={null}>
         <primitive
           ref={modelRef}
