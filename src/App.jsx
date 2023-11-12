@@ -1,6 +1,6 @@
 import { Canvas } from "@react-three/fiber";
 import "./App.css";
-import Experience from "./components/Experience";
+// import Experience from "./components/Experience";
 // import Experience2 from "./components/Experience2";
 import Experience3 from "./components/Experience3";
 import { OrbitControls } from "@react-three/drei";

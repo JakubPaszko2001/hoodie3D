@@ -1,13 +1,14 @@
-body {
+* {
   margin: 0;
-  overflow: hidden;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .App {
   width: 100vw;
   height: 100vh;
   position: relative;
-  background-color: #000000; /* Kolor tła */
+  /* background-color: #000000; */
 }
 
 .Canvas {

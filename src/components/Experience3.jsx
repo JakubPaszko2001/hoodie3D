@@ -7,7 +7,26 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { useFrame } from "@react-three/fiber";
 
 const Experience = () => {
-  const gltf = useLoader(GLTFLoader, "./models/hoodie2/untitled3.gltf");
+  // Initialize loading state
+  const [loading, setLoading] = React.useState(true);
+
+  // Create a progress callback function
+  const onProgress = (xhr) => {
+    const percentLoaded = (xhr.loaded / xhr.total) * 100;
+    console.log(`Model ${Math.floor(percentLoaded)}% loaded`);
+
+    // If loading is complete, set loading to false
+    if (percentLoaded === 100) {
+      setLoading(false);
+    }
+  };
+
+  const gltf = useLoader(
+    GLTFLoader,
+    "./models/hoodie2/untitled3.gltf",
+    undefined,
+    onProgress
+  );
   const modelScale = [7, 7, 7];
 
   const directionalLight1Ref = useRef();
