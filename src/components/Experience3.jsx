@@ -6,19 +6,12 @@ import { useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { useFrame } from "@react-three/fiber";
 
-const Experience = () => {
-  // Initialize loading state
-  const [loading, setLoading] = React.useState(true);
-
+const Experience = ({ setLoadingProgress }) => {
   // Create a progress callback function
   const onProgress = (xhr) => {
     const percentLoaded = (xhr.loaded / xhr.total) * 100;
-    console.log(`Model ${Math.floor(percentLoaded)}% loaded`);
-
-    // If loading is complete, set loading to false
-    if (percentLoaded === 100) {
-      setLoading(false);
-    }
+    setLoadingProgress(Math.floor(percentLoaded));
+    // console.log(`Model ${Math.floor(percentLoaded)}% loaded`);
   };
 
   const gltf = useLoader(

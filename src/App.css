@@ -18,3 +18,19 @@
   right: 0;
   bottom: 0;
 }
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000 !important;
+  color: white;
+  z-index: 10;
+}
