@@ -8,7 +8,7 @@ function App() {
   const [loadingProgress, setLoadingProgress] = useState(0);
   const [showLoader, setShowLoader] = useState(true);
 
-  console.log(loadingProgress, "App");
+  // console.log(loadingProgress, "App");
 
   useEffect(() => {
     if (loadingProgress === 100) {
