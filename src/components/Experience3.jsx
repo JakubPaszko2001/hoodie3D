@@ -9,11 +9,9 @@ import { useFrame } from "@react-three/fiber";
 const Experience = ({ setLoadingProgress }) => {
   // Create a progress callback function
   const onProgress = (xhr) => {
-    console.log(xhr);
-    const percentLoaded = (xhr.loaded / xhr.total) * 100;
+    const percentLoaded = (xhr.loaded / (xhr.total || xhr.loaded)) * 100;
     setLoadingProgress(Math.floor(percentLoaded));
-    // console.log(Math.floor(percentLoaded), "Exp");
-    // console.log(`Model ${Math.floor(percentLoaded)}% loaded`);
+    console.log(Math.floor(percentLoaded), "Exp");
   };
 
   const gltf = useLoader(
