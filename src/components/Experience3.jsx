@@ -11,6 +11,7 @@ const Experience = ({ setLoadingProgress }) => {
   const onProgress = (xhr) => {
     const percentLoaded = (xhr.loaded / xhr.total) * 100;
     setLoadingProgress(Math.floor(percentLoaded));
+    console.log(Math.floor(percentLoaded), "Exp");
     // console.log(`Model ${Math.floor(percentLoaded)}% loaded`);
   };
 

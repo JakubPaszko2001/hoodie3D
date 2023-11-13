@@ -8,6 +8,8 @@ function App() {
   const [loadingProgress, setLoadingProgress] = useState(0);
   const [showLoader, setShowLoader] = useState(true);
 
+  console.log(loadingProgress, "App");
+
   useEffect(() => {
     if (loadingProgress === 100) {
       // Set a timeout to hide the loader 2 seconds after hitting 100%
